@@ -188,7 +188,7 @@ class _LogoSlot extends StatelessWidget {
         if (snap.data == true) {
           return Align(
             alignment: Alignment.centerLeft,
-            child: Image.asset('assets/images/logo.png', height: 48),
+            child: Image.asset('assets/images/transparent-logo-512px.png', height: 160),
           );
         }
         return Align(
@@ -216,7 +216,7 @@ class _LogoSlot extends StatelessWidget {
 
   Future<bool> _hasLogo() async {
     try {
-      await rootBundle.load('assets/images/logo.png');
+      await rootBundle.load('assets/images/transparent-logo-512px.png');
       return true;
     } catch (_) {
       return false;
