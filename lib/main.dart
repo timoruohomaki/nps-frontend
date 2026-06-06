@@ -4,6 +4,7 @@ import 'api/feedback_client.dart';
 import 'config.dart';
 import 'device_context.dart';
 import 'screens/nps_screen.dart';
+import 'theme.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,10 +31,7 @@ class NpsApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'NPS Feedback',
-      theme: ThemeData(
-        useMaterial3: true,
-        colorSchemeSeed: Colors.indigo,
-      ),
+      theme: AppTheme.light(),
       home: NpsScreen(config: config, device: device, client: client),
     );
   }
